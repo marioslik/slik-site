@@ -1,5 +1,6 @@
 $(document).ready(function(){
   $(".back-to-top").hide();
+  TweenMax.set('.back-to-top span', {alpha:0});
 
   $(function () {
         $(window).scroll(function () {
@@ -21,6 +22,13 @@ $(document).ready(function(){
         });
     });
 
-  
+    $(".back-to-top").hover(
+      function() {
+        TweenMax.to('.back-to-top span', 0.5, {ease:Power1.easeInOut, x:40, alpha:1});
+      },
+      function() {
+        TweenMax.to('.back-to-top span', 0.5, {ease:Power1.easeInOut, x:0, alpha:0});
+      }
+    );
 
 });
