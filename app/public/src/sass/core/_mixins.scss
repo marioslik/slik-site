@@ -1,0 +1,32 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin unlist {
+  list-style: none;
+
+  > li {
+    display: inline-block;
+    margin: 0;
+  }
+}
+
+@mixin square {
+  &:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+}
+
+@mixin rectangle {
+  &:after {
+    content: "";
+    display: block;
+    padding-bottom: 60%;
+  }
+}
