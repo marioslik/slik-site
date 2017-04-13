@@ -2,6 +2,8 @@ $(document).ready(function() {
     $(".back-to-top").hide();
 
 
+
+
     TweenMax.set('.back-to-top span', {
         alpha: 0
     });
@@ -91,8 +93,22 @@ $(document).ready(function() {
     /* Scrollmagic - body content transitions on scroll */
 
     // var scrollController = new ScrollMagic.Controller(),
-    //     videosTween, teamTween, resourcesTween, yourMarketTween, compareTween, suburbProfileTween, processTween, feedbackTween,
-    //     scene, scene2, scene3, scene4, scene5, scene6, scene7, scene8, scene9;
+    //     heroTween, socialTween, clientsTween, contactTween, moreToComeTween,
+    //     scene, scene2, scene3, scene4, scene5;
+
+    // heroTween = new TimelineMax();
+    // heroTween.from('.were-slik-1', 1, { ease:Power1.easeInOut, x:50, alpha:0 })
+    //            .from('.were-slik-2', 0.9, { ease:Power1.easeInOut, x:-50, alpha:0 }, "-=0.75")
+    //            .from('#line1', 0.9, { ease:Power1.easeInOut, scaleY:0, alpha:0 }, "-=0.75")
+    // ;
+
+    // scene = new ScrollMagic.Scene({
+    //   triggerElement: '#hero',
+    //   offset: 50,
+    //   reverse:false
+    // })
+    // .setTween(heroTween)
+    // .addTo(scrollController);
 
 
 
