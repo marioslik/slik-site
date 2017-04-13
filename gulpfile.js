@@ -45,7 +45,7 @@ gulp.task('vendor-js', function() {
             'node_modules/clipboard/dist/clipboard.min.js',
             'node_modules/fastclick/lib/fastclick.js',
             'node_modules/underscore/underscore-min.js',
-            'app/public/src/js/lib/ie9.js'
+            'app/public/src/js/lib/*.js'
         ])
 
         .pipe(concat('vendor.min.js'))

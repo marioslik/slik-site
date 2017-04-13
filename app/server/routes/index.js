@@ -15,9 +15,12 @@ function routes(app) {
 
     // router.route('/api/setting')
     //     .get(main.setting);
-    // 
+    //
     // router.route('/*')
     //     .get(main.notFoundPage);
+
+    router.route('/api/social')
+      .get(main.social)
 
     app.use(router);
 }

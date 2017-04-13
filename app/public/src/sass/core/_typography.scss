@@ -6,7 +6,7 @@
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Rajdhani';
-  font-weight: 300;
+  font-weight: 800;
   text-transform: uppercase;
 
   &::selection {
@@ -27,4 +27,14 @@ p {
 
 p::selection {
   background: #000; /* WebKit/Blink Browsers */
+}
+
+.type-texture {
+  position: absolute;
+  text-transform: uppercase;
+  font-family: Rajdhani;
+  font-weight: 800;
+  font-size: 250px;
+  color: rgba(0,0,0,.16)!important;
+  transform: skewY(1.5deg);
 }
