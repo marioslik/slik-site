@@ -30,11 +30,16 @@ p::selection {
 }
 
 .type-texture {
+  font-size: 80px;
+  color: rgba(0,0,0,.16)!important;
+  transform: skewY(1.5deg);
   position: absolute;
   text-transform: uppercase;
   font-family: Rajdhani;
   font-weight: 800;
-  font-size: 250px;
-  color: rgba(0,0,0,.16)!important;
-  transform: skewY(1.5deg);
+
+  @media screen and (min-width: 60em) {
+    font-size: 250px;
+  }
+
 }

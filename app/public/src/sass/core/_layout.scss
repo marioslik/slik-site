@@ -14,6 +14,7 @@ section {
     position: relative;
     transform: skewY(-1.5deg);
     margin-top: -1px;
+    overflow: hidden;
 }
 
 img {
@@ -160,18 +161,27 @@ img {
 */
 
 .line {
-  width: 2px;
-  background: #595959;
-  position: absolute;
+  display: none;
+
+  @media screen and (min-width: 60em) {
+    display: block;
+    width: 2px;
+    background: #595959;
+    position: absolute;
+  }
 }
 
 #hero {
     background-image: linear-gradient(-45deg, #0b0a0a 0%, #2e3037 100%);
     margin-top: -2%;
-    padding-top: 200px;
+    padding-top: 0px;
     position: relative;
     height: 90vh;
     transition: all 1s ease-in-out;
+
+    @media screen and (min-width: 60em) {
+      padding-top: 200px;
+    }
 
     .hero-overlay {
       position: absolute;
@@ -206,30 +216,32 @@ img {
         position: absolute;
 
         &.were-slik-1 {
-          top: 5%;
+          top: 2%;
           left: 7%;
 
           @media screen and (min-width: 40em) {
-            top: -40px;
+            top: 7%;
             left: 16%;
           }
 
           @media screen and (min-width: 60em) {
+            top: 1%;
             left: 7%;
           }
         }
 
         &.were-slik-2 {
-          top: 53%;
+          top: 47%;
           left: 50%;
 
           @media screen and (min-width: 40em) {
-            top: 600px;
+            top: 54%;
             left: 59%;
           }
         }
 
         @media screen and (min-width: 60em) {
+            top: 66%;
             font-size: 140px;
         }
     }
@@ -243,19 +255,13 @@ img {
     }
 
     .slik-logo-main {
-      position: absolute;
-      top: 30%;
+      top: 42%;
       left: 47%;
-      width: 100%;
-      margin-top: -50%;
-      margin-left: -50%;
-      z-index: 0;
+      margin-top: 12%;
+      margin-left: -5%;
+      width: 80%;
 
-      @media screen and (min-width: 370px) {
-        width: 70%;
-        margin-top: -35%;
-        margin-left: -35%;
-      }
+
 
       @media screen and (min-width: 40em) {
         top: 30%;
@@ -263,11 +269,12 @@ img {
         width: 60%;
         margin-top: -30%;
         margin-left: -30%;
+        position: absolute;
       }
 
       @media screen and (min-width: 60em) {
         top: 35%;
-        left: 47%;
+        left: 50%;
         width: 50%;
         margin-top: -25%;
         margin-left: -25%;
@@ -276,37 +283,59 @@ img {
 
     .row {
         position: relative;
-        top: 10%;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: 100%;
+        top: 0;
+        height: 100vh;
         width: 100%;
+
+        @media screen and (min-width: 60em) {
+            top: 10%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+        }
     }
 
     .intro {
         position: absolute;
-        top: 0;
+        top: 73px;
         left: 0;
         right: 0;
         bottom: 0;
         margin: auto;
         vertical-align: middle;
-        height: auto;
+        height: 100%;
         padding: 15px;
+
+        @media screen and (min-width: 60em) {
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+          vertical-align: middle;
+          height: auto;
+          padding: 15px;
+        }
 
         .hero-description {
           max-width: 320px;
           margin-left: auto;
           margin-right: auto;
-          position: relative;
-          top: 90%;
+          position: absolute;
+          bottom: 65px;
+          padding-bottom: 30px;
 
           @media screen and (min-width: 40em) {
+              position: relative;
+              top: 70%;
               max-width: 600px;
+              padding-bottom: 0;
           }
           @media screen and (min-width: 60em) {
               max-width: 860px;
+              top: 95%;
           }
         }
 
@@ -317,7 +346,7 @@ img {
             text-transform: uppercase;
             color: #FFFFFF;
             letter-spacing: 0;
-            line-height: 48px;
+            line-height: 1;
             text-align: left;
 
             @media screen and (min-width: 60em) {
@@ -340,14 +369,22 @@ img {
     .slik-intro {
       text-align: left;
     }
+}
 
-    #line2 {
-      @media screen and (min-width: 40em) {
-        right: 15px;
-        top: -32%;
-        height: 40%;
-      }
-    }
+#line2 {
+  @media screen and (min-width: 40em) {
+    top: 25%;
+    right: 3%;
+    height: 5%;
+  }
+
+  @media screen and (min-width: 60em) {
+    right: 5%;
+  }
+
+  @media screen and (min-width: 80em) {
+    right: 20%;
+  }
 }
 
 .social-loader {
@@ -790,11 +827,18 @@ img {
     position: relative;
 
     .coming {
+      font-size: 30px;
       left:0;
       top:0;
       opacity: 0.2;
       transform: skewY(0deg);
-      font-size: 14em;
+      font-size: 5em;
+
+      @media screen and (min-width: 60em) {
+        font-size: 14em;
+      }
+
+
     }
 
     .soon {
@@ -804,7 +848,11 @@ img {
       transform: skewY(0);
       display: inline;
       line-height: 0.7;
-      font-size: 14em;
+      font-size: 5em;
+
+      @media screen and (min-width: 60em) {
+        font-size: 14em;
+      }
     }
 
     .row {
