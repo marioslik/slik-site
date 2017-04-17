@@ -25,6 +25,7 @@ img {
 .row {
     transform: skewY(1.5deg);
     margin-top: -30px;
+    @include clearfix;
 }
 
 .slik-intro {
@@ -168,6 +169,7 @@ img {
     width: 2px;
     background: #595959;
     position: absolute;
+    transform-origin: 50% 0%;
   }
 }
 
@@ -235,7 +237,7 @@ img {
           transform: translateY(-50%);
 
           @media screen and (min-width: 40em) {
-            left: 59%;
+            left: 61%;
           }
         }
 
@@ -263,14 +265,13 @@ img {
       @media screen and (min-width: 40em) {
         left: 47%;
         width: 500px;
-        margin-left: -30%;
+        margin-left: -250px;
         position: absolute;
       }
 
       @media screen and (min-width: 60em) {
         left: 50%;
         width: 500px;
-        margin-left: -25%;
       }
     }
 
@@ -737,9 +738,10 @@ img {
     z-index: 1;
 
     .con {
-      left:30%;
+      left:7%;
       top:10%;
       opacity: 1;
+      color: rgba(0,0,0,0.4) !important;
     }
 
     .tact {
@@ -757,7 +759,12 @@ img {
 
         @media screen and (min-width: 40em) {
             width: 33%;
+            float: left;
             margin-bottom: 0px;
+
+            &:last-of-type {
+              float: right;
+            }
         }
 
         &:nth-child(3) {
@@ -822,6 +829,7 @@ img {
             @media screen and (min-width: 40em) {
               width: 50%;
               float: right;
+              height: 154px;
             }
 
             p {

@@ -1,7 +1,6 @@
 $(document).ready(function() {
+
     $(".back-to-top").hide();
-
-
 
 
     TweenMax.set('.back-to-top span', {
@@ -92,25 +91,128 @@ $(document).ready(function() {
 
     /* Scrollmagic - body content transitions on scroll */
 
-    // var scrollController = new ScrollMagic.Controller(),
-    //     heroTween, socialTween, clientsTween, contactTween, moreToComeTween,
-    //     scene, scene2, scene3, scene4, scene5;
+    var scrollController = new ScrollMagic.Controller(),
+        heroTween, socialTween, clientsTween, contactTween, moreToComeTween,
+        scene, scene2, scene3, scene4, scene5;
 
-    // heroTween = new TimelineMax();
-    // heroTween.from('.were-slik-1', 1, { ease:Power1.easeInOut, x:50, alpha:0 })
-    //            .from('.were-slik-2', 0.9, { ease:Power1.easeInOut, x:-50, alpha:0 }, "-=0.75")
-    //            .from('#line1', 0.9, { ease:Power1.easeInOut, scaleY:0, alpha:0 }, "-=0.75")
-    // ;
+    heroTween = new TimelineMax();
+    heroTween.from('.were-slik-1', 1, { ease:Power1.easeInOut, x:50, alpha:0, delay: 0.5 })
+               .from('.were-slik-2', 0.9, { ease:Power1.easeInOut, x:-50, alpha:0 }, "-=1")
+               .from('.hero-description span', 0.9, { ease:Power1.easeInOut,  alpha:0 }, "-=0.5")
+               .from('.hero-description p', 0.9, { ease:Power1.easeInOut, alpha:0 }, "-=0.75")
+               .from('#line1', 0.9, { ease:Power1.easeInOut, scaleY:0, alpha:0 }, "-=0.9")
+               .from('#line2', 0.9, { ease:Power1.easeInOut, scaleY:0, alpha:0 }, "-=0.55")
+    ;
 
-    // scene = new ScrollMagic.Scene({
-    //   triggerElement: '#hero',
-    //   offset: 50,
-    //   reverse:false
-    // })
-    // .setTween(heroTween)
-    // .addTo(scrollController);
+    scene = new ScrollMagic.Scene({
+      triggerElement: '#hero',
+      offset: 50,
+      reverse:false
+    })
+    .setTween(heroTween)
+    .addTo(scrollController);
 
 
+    socialTween = new TimelineMax();
+    socialTween.staggerFrom('.social-feed li', 1, { ease:Power1.easeInOut, alpha:0 }, 0.07)
+
+    ;
+
+    scene2 = new ScrollMagic.Scene({
+      triggerElement: '#slik-tricks',
+      offset: 50,
+      reverse:false
+    })
+    .setTween(socialTween)
+    .addTo(scrollController);
+
+
+    clientsTween = new TimelineMax();
+    socialTween.staggerFrom('.companies-list li', 0.75, { ease:Power1.easeInOut, y: 50, alpha:0 }, 0.07)
+
+    ;
+
+    scene3 = new ScrollMagic.Scene({
+      triggerElement: '#companies',
+      offset: 150,
+      reverse:false
+    })
+    .setTween(clientsTween)
+    .addTo(scrollController);
+
+    var parallaxSceneCli = new ScrollMagic.Scene({
+			triggerElement: '#companies',
+			duration: '200%',
+			triggerHook: 1
+		})
+		.setTween('.cli', {
+			y: "200%",
+			ease: Power1.easeInOut
+		})
+		.addTo(scrollController);
+
+    var parallaxSceneEnts = new ScrollMagic.Scene({
+			triggerElement: '#companies',
+			duration: '200%',
+			triggerHook: 1.4
+		})
+		.setTween('.ents', {
+			y: "-600",
+			ease: Power1.easeInOut
+		})
+		.addTo(scrollController);
+
+    var parallaxSceneCon = new ScrollMagic.Scene({
+			triggerElement: '#get-in-touch',
+			duration: '200%',
+			triggerHook: 1
+		})
+		.setTween('.con', {
+			y: "200%",
+			ease: Power1.easeInOut
+		})
+		.addTo(scrollController);
+
+    var parallaxSceneTact = new ScrollMagic.Scene({
+			triggerElement: '#get-in-touch',
+			duration: '200%',
+			triggerHook: 1.4
+		})
+		.setTween('.tact', {
+			y: "-600",
+			ease: Power1.easeInOut
+		})
+		.addTo(scrollController);
+
+
+    contactTween = new TimelineMax();
+    socialTween.staggerFrom('#get-in-touch .contact', 1, {ease: Power1.easeInOut, y:30, alpha:0}, 0.1)
+    .from('.office', 1, {ease: Power1.easeInOut, y:30, alpha:0})
+
+    ;
+
+    scene4 = new ScrollMagic.Scene({
+      triggerElement: '#get-in-touch',
+      offset: 250,
+      reverse:false
+    })
+    .setTween(contactTween)
+    .addTo(scrollController);
+
+
+    moreToComeTween = new TimelineMax();
+    socialTween.from('.coming', 1, {ease: Power1.easeInOut, x:-30, alpha:0})
+    .from('.soon', 1, {ease: Power1.easeInOut, x:30, alpha:0})
+
+    ;
+
+    scene5 = new ScrollMagic.Scene({
+      triggerElement: '#more-to-come',
+      offset: 150,
+      reverse:false
+    })
+    .setTween(moreToComeTween)
+    .addTo(scrollController);
 
 });
 
