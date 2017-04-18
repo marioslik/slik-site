@@ -26,6 +26,9 @@ img {
     transform: skewY(1.5deg);
     margin-top: -30px;
     @include clearfix;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .slik-intro {
@@ -227,7 +230,8 @@ img {
           }
 
           @media screen and (min-width: 60em) {
-            left: 7%;
+            top: 0;
+            left: 2%;
           }
         }
 
@@ -248,9 +252,9 @@ img {
 
     #line1 {
       @media screen and (min-width: 40em) {
-        left: 7%;
+        left: 20px;
         top: 28%;
-        height: 54%;
+        height: 44%;
       }
     }
 
@@ -327,7 +331,7 @@ img {
               max-width: 600px;
           }
           @media screen and (min-width: 60em) {
-              max-width: 860px;
+              max-width: 1000px;
               top: 95%;
               padding-bottom: 0;
           }
